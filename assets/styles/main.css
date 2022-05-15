@@ -1,0 +1,46 @@
+@font-face { font-family: 'Beth Ellen'; src: url('/assets/fonts/beth-ellen/Beth-Ellen-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+
+*,
+::before,
+::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 62.5%; /* (16px * 0.625) = 10px root */ }
+body { font-size: 1.8rem; /* 18px */ line-height: 1.618; /* 29px */ font-family: 'Alegreya', serif; font-weight: normal; /*color: #330000; */ }
+
+/* typographic scale = 1.8 x 1.618 = 2.912 */
+/* 3/4 scale = 2.184 */
+/* 1/2 scale = 1.456 */
+/* 1/4 scale = 0.728 */
+/* 1/8 scale = 0.364 */
+/* 1/16 scale = 0.182 */
+
+h1, .h1 { /* target font size 45px (2.5 x paragraph text) */ font-size: 4.5rem; font-weight: normal; line-height: 1; margin-bottom: 1.456rem; }
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 { /* target font size 36px (2 x paragraph text) */ font-size: 3.6rem; font-weight: normal; font-style: italic; line-height: 1; margin-bottom: 2.912rem; }
+p { /* target font size 18px (paragraph text) */ margin-bottom: 2.912rem; }
+a { text-decoration: underline dotted; }
+i[lang] { font-style: italic; }
+cite { font-style: italic; font-variant: small-caps; font-weight: 600; }
+q { font-family: 'Beth Ellen', cursive; font-weight: normal; font-style: normal; }
+ul,
+ol,
+dl { margin: 0 0 2.912rem 2.184rem; }
+li { padding: 0 0 0 .728rem; }
+
+body > header,
+body > main,
+body > footer { padding: 1.456rem; }
+body > footer { font-size: 1.4rem; }
+
+.text-xl { font-size: 2.4rem; }
+.text-lg { font-size: 2.1rem; }
+.text-md { font-size: 1.8rem; }
+.text-sm { font-size: 1.6rem; }
+.text-xs { font-size: 1.4rem; }
+
+.logo { font-family: 'Beth Ellen', cursive; font-weight: normal; text-decoration: none; }
+.headline { text-align: center; }
+.title { font-family: 'Beth Ellen', cursive; }
+/* .subtitle {  } */
