@@ -8,6 +8,7 @@
 *,
 ::before,
 ::after {
+  content: '';
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -28,6 +29,36 @@ body {
   font-weight: normal;
   color: #300;
   background: #efebe9;
+}
+
+body > header {
+  padding: 1.8rem;
+  color: #efebe9;
+  background: #1a0000;
+}
+
+body > header a {
+  color: #efebe9;
+}
+
+body > main > * {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+body > footer {
+  padding: 3.6rem 1.8rem;
+  color: rgba(239, 235, 233, 0.5);
+  background: #1a0000;
+  font-size: 1.6rem;
+}
+
+body > footer :last-child {
+  margin-bottom: 0;
+}
+
+body > footer a {
+  color: rgba(239, 235, 233, 0.5);
 }
 
 h1, .h1 {
@@ -68,18 +99,6 @@ i[lang] {
   font-style: italic;
 }
 
-cite {
-  font-style: italic;
-  font-variant: small-caps;
-  font-weight: 600;
-}
-
-q {
-  font-family: "Beth Ellen", cursive;
-  font-weight: normal;
-  font-style: normal;
-}
-
 ul,
 ol,
 dl {
@@ -90,34 +109,53 @@ li {
   padding: 0 0 0 0.45rem;
 }
 
-body > header {
-  padding: 1.8rem;
-  color: #efebe9;
-  background: #1a0000;
+dfn {
+  color: #b71c1c;
 }
 
-body > header a {
-  color: #efebe9;
+cite {
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 600;
 }
 
-body > main > * {
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
+q, .quote {
+  font-family: "Beth Ellen", cursive;
+  font-weight: normal;
+  font-style: normal;
 }
 
-body > footer {
-  padding: 3.6rem 1.8rem;
-  color: rgba(239, 235, 233, 0.5);
-  background: #1a0000;
-  font-size: 1.6rem;
+blockquote, .blockquote {
+  position: relative;
+  font-family: "Beth Ellen", cursive;
+  margin: 3.6rem 1.8rem;
+  padding: 3.6rem;
+  border-left: solid 3px #300;
+  color: #300;
+  background: #FFF3E0;
+  font-weight: 200;
+  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-body > footer :last-child {
+blockquote::before, blockquote::after, .blockquote::before, .blockquote::after {
+  position: absolute;
+  content: '"';
+  color: #8c7b75;
+}
+
+blockquote::before, .blockquote::before {
+  top: 3.6rem;
+  left: 1.8rem;
+}
+
+blockquote::after, .blockquote::after {
+  bottom: 3.6rem;
+  right: 3.6rem;
+}
+
+blockquote :last-child, .blockquote :last-child {
   margin-bottom: 0;
-}
-
-body > footer a {
-  color: rgba(239, 235, 233, 0.5);
 }
 
 .logo {
@@ -131,17 +169,20 @@ body > footer a {
   background: #300;
   color: #efebe9;
   padding: 3.6rem 1.8rem;
-  margin-bottom: 3.6rem;
+  margin-bottom: 5.4rem;
 }
 
 .showcase :last-child {
   margin-bottom: 0;
 }
 
-main .highlight {
+.highlight {
+  display: block;
+  position: relative;
+  font-family: "Alegreya", serif;
   margin: 3.6rem 1.8rem;
   padding: 3.6rem;
-  border-left: solid 5px #300;
+  border-left: solid 3px #300;
   color: #300;
   background: #FFF3E0;
   font-weight: 200;
@@ -149,7 +190,7 @@ main .highlight {
           box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-main .highlight :last-child {
+.highlight :last-child {
   margin-bottom: 0;
 }
 

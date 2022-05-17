@@ -1,2 +1,2 @@
-assets/styles/*.scss
-assets/styles/*.map
+*.scss
+*.map
