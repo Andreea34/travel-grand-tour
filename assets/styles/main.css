@@ -1,46 +1,175 @@
-@font-face { font-family: 'Beth Ellen'; src: url('../fonts/beth-ellen/Beth-Ellen-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+@font-face {
+  font-family: "Beth Ellen";
+  src: url("../fonts/beth-ellen/Beth-Ellen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 *,
 ::before,
-::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: 62.5%; /* (16px * 0.625) = 10px root */ }
-body { font-size: 1.8rem; /* 18px */ line-height: 1.618; /* 29px */ font-family: 'Alegreya', serif; font-weight: normal; /*color: #330000; */ }
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-/* typographic scale = 1.8 x 1.618 = 2.912 */
-/* 3/4 scale = 2.184 */
-/* 1/2 scale = 1.456 */
-/* 1/4 scale = 0.728 */
-/* 1/8 scale = 0.364 */
-/* 1/16 scale = 0.182 */
+html {
+  font-size: 62.5%;
+  /* (16px * 0.625) = 10px root */
+}
 
-h1, .h1 { /* target font size 45px (2.5 x paragraph text) */ font-size: 4.5rem; font-weight: normal; line-height: 1; margin-bottom: 1.456rem; }
+body {
+  font-size: 1.8rem;
+  /* 18px */
+  line-height: 2;
+  /* 36px */
+  font-family: "Alegreya", serif, serif;
+  font-weight: normal;
+  color: #300;
+  background: #efebe9;
+}
+
+h1, .h1 {
+  /* target font size 45px (2.5 x paragraph text) */
+  font-family: "Beth Ellen", cursive;
+  font-size: 4.5rem;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 1.8rem;
+}
+
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 { /* target font size 36px (2 x paragraph text) */ font-size: 3.6rem; font-weight: normal; font-style: italic; line-height: 1; margin-bottom: 2.912rem; }
-p { /* target font size 18px (paragraph text) */ margin-bottom: 2.912rem; }
-a { text-decoration: underline dotted; }
-i[lang] { font-style: italic; }
-cite { font-style: italic; font-variant: small-caps; font-weight: 600; }
-q { font-family: 'Beth Ellen', cursive; font-weight: normal; font-style: normal; }
+h6, .h6 {
+  /* target font size 36px (2 x paragraph text) */
+  font-family: "Alegreya", serif;
+  font-size: 3.6rem;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 3.6rem;
+}
+
+p {
+  /* target font size 18px (paragraph text) */
+  margin-bottom: 3.6rem;
+}
+
+a {
+  color: #b71c1c;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+i[lang] {
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+q {
+  font-family: "Beth Ellen", cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
 ul,
 ol,
-dl { margin: 0 0 2.912rem 2.184rem; }
-li { padding: 0 0 0 .728rem; }
+dl {
+  margin: 0 0 3.6rem 1.8rem;
+}
 
-body > header,
-body > main,
-body > footer { padding: 1.456rem; }
-body > footer { font-size: 1.4rem; }
+li {
+  padding: 0 0 0 0.45rem;
+}
 
-.text-xl { font-size: 2.4rem; }
-.text-lg { font-size: 2.1rem; }
-.text-md { font-size: 1.8rem; }
-.text-sm { font-size: 1.6rem; }
-.text-xs { font-size: 1.4rem; }
+body > header {
+  padding: 1.8rem;
+  color: #efebe9;
+  background: #1a0000;
+}
 
-.logo { font-family: 'Beth Ellen', cursive; font-weight: normal; text-decoration: none; }
-.showcase { text-align: center; }
-.title { font-family: 'Beth Ellen', cursive; }
-/* .subtitle {  } */
+body > header a {
+  color: #efebe9;
+}
+
+body > main > * {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+body > footer {
+  padding: 3.6rem 1.8rem;
+  color: rgba(239, 235, 233, 0.5);
+  background: #1a0000;
+  font-size: 1.6rem;
+}
+
+body > footer :last-child {
+  margin-bottom: 0;
+}
+
+body > footer a {
+  color: rgba(239, 235, 233, 0.5);
+}
+
+.logo {
+  font-family: "Beth Ellen", cursive;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.showcase {
+  text-align: center;
+  background: #300;
+  color: #efebe9;
+  padding: 3.6rem 1.8rem;
+  margin-bottom: 3.6rem;
+}
+
+.showcase :last-child {
+  margin-bottom: 0;
+}
+
+main .highlight {
+  margin: 3.6rem 1.8rem;
+  padding: 3.6rem;
+  border-left: solid 5px #300;
+  color: #300;
+  background: #FFF3E0;
+  font-weight: 200;
+  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+main .highlight :last-child {
+  margin-bottom: 0;
+}
+
+#main-menu {
+  color: #efebe9;
+}
+
+#main-menu > ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-menu > ol > li {
+  padding: 0;
+  margin: 0;
+}
+
+#main-menu > ol > li > a {
+  color: #efebe9;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
