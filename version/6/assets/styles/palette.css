@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "Beth Ellen";
+  src: url("../fonts/beth-ellen/Beth-Ellen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+
+#colors p {
+  text-align: center;
+}
+
+#colors .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+#colors .grid .color,
+#colors .grid .range,
+#colors .grid .combo {
+  text-align: center;
+}
+
+#colors .grid .color .swatch,
+#colors .grid .range .swatch,
+#colors .grid .combo .swatch {
+  width: 75px;
+  height: 75px;
+  padding-top: 18px;
+  margin: 0 auto;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+#colors .grid .color .swatch span,
+#colors .grid .range .swatch span,
+#colors .grid .combo .swatch span {
+  font-size: 1.6rem;
+  font-variant: small-caps;
+}
+
+#colors .grid .color label,
+#colors .grid .range label,
+#colors .grid .combo label {
+  display: block;
+  line-height: 2.7rem;
+  font-variant: small-caps;
+}
+
+#colors .grid .color label:first-of-type,
+#colors .grid .range label:first-of-type,
+#colors .grid .combo label:first-of-type {
+  margin-top: 0.9rem;
+}
+
+#colors .grid .color.dark .swatch {
+  background: #100;
+  color: #EFEBE9;
+}
+
+#colors .grid .color.primary .swatch {
+  background: #300;
+  color: #EFEBE9;
+}
+
+#colors .grid .color.accent .swatch {
+  background: #900;
+  color: #EFEBE9;
+}
+
+#colors .grid .color.highlight .swatch {
+  background: #FFE0B2;
+  color: #100;
+}
+
+#colors .grid .color.muted .swatch {
+  background: #D2C6C2;
+  color: #100;
+}
+
+#colors .grid .color.light .swatch {
+  background: #EFEBE9;
+  color: #100;
+}
+
+#colors .grid .range .swatch:nth-child(1) {
+  border-bottom: none;
+}
+
+#colors .grid .range .swatch:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+
+#colors .grid .range .swatch:nth-child(3) {
+  border-top: none;
+}
+
+#colors .grid .range.dark .swatch {
+  background: #100;
+  color: #EFEBE9;
+}
+
+#colors .grid .range.dark .swatch.dark {
+  background: black;
+}
+
+#colors .grid .range.dark .swatch.default {
+  background: #100;
+}
+
+#colors .grid .range.dark .swatch.light {
+  background: #440000;
+}
+
+#colors .grid .range.primary .swatch {
+  background: #300;
+  color: #EFEBE9;
+}
+
+#colors .grid .range.primary .swatch.dark {
+  background: black;
+}
+
+#colors .grid .range.primary .swatch.default {
+  background: #300;
+}
+
+#colors .grid .range.primary .swatch.light {
+  background: #660000;
+}
+
+#colors .grid .range.accent .swatch {
+  background: #900;
+  color: #EFEBE9;
+}
+
+#colors .grid .range.accent .swatch.dark {
+  background: #660000;
+}
+
+#colors .grid .range.accent .swatch.default {
+  background: #900;
+}
+
+#colors .grid .range.accent .swatch.light {
+  background: #cc0000;
+}
+
+#colors .grid .range.highlight .swatch {
+  background: #FFE0B2;
+  color: #100;
+}
+
+#colors .grid .range.highlight .swatch.dark {
+  background: #ffcb7f;
+}
+
+#colors .grid .range.highlight .swatch.default {
+  background: #FFE0B2;
+}
+
+#colors .grid .range.highlight .swatch.light {
+  background: #fff5e5;
+}
+
+#colors .grid .range.muted .swatch {
+  background: #D2C6C2;
+  color: #100;
+}
+
+#colors .grid .range.muted .swatch.dark {
+  background: #bcaba5;
+}
+
+#colors .grid .range.muted .swatch.default {
+  background: #D2C6C2;
+}
+
+#colors .grid .range.muted .swatch.light {
+  background: #e8e1df;
+}
+
+#colors .grid .range.light .swatch {
+  background: #EFEBE9;
+  color: #100;
+}
+
+#colors .grid .range.light .swatch.dark {
+  background: #dad0cb;
+}
+
+#colors .grid .range.light .swatch.default {
+  background: #EFEBE9;
+}
+
+#colors .grid .range.light .swatch.light {
+  background: white;
+}
+
+#colors .grid .combo .swatch:nth-child(1) {
+  border-bottom: none;
+}
+
+#colors .grid .combo .swatch:nth-child(2) {
+  border-top: none;
+}
+
+#colors .grid .combo.dark .swatch.bg {
+  background: #100;
+  color: #D2C6C2;
+}
+
+#colors .grid .combo.dark .swatch.fg {
+  background: #D2C6C2;
+  color: #100;
+}
+
+#colors .grid .combo.primary .swatch.bg {
+  background: #300;
+  color: #EFEBE9;
+}
+
+#colors .grid .combo.primary .swatch.fg {
+  background: #EFEBE9;
+  color: #300;
+}
+
+#colors .grid .combo.accent .swatch.bg {
+  background: #900;
+  color: #EFEBE9;
+}
+
+#colors .grid .combo.accent .swatch.fg {
+  background: #EFEBE9;
+  color: #900;
+}
+
+#colors .grid .combo.highlight .swatch.bg {
+  background: #FFE0B2;
+  color: #300;
+}
+
+#colors .grid .combo.highlight .swatch.fg {
+  background: #300;
+  color: #FFE0B2;
+}
+
+#colors .grid .combo.muted .swatch.bg {
+  background: #D2C6C2;
+  color: #300;
+}
+
+#colors .grid .combo.muted .swatch.fg {
+  background: #300;
+  color: #D2C6C2;
+}
+
+#colors .grid .combo.light .swatch.bg {
+  background: #EFEBE9;
+  color: #300;
+}
+
+#colors .grid .combo.light .swatch.fg {
+  background: #300;
+  color: #EFEBE9;
+}
+/*# sourceMappingURL=palette.css.map */
