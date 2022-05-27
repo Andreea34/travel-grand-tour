@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Beth Ellen";
+  src: url("../fonts/beth-ellen/Beth-Ellen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+
+html {
+  font-size: 62.5%;
+  /* (16px * 0.625) = 10px root */
+  line-height: 1;
+}
+
+body {
+  font-size: 1.8rem;
+  /* 18px */
+  line-height: 2;
+  /* 36px */
+  font-family: "Alegreya", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  letter-spacing: 0.05rem;
+}
+
+h1 {
+  /* target font size 45px (2.5 x paragraph text) */
+  font-size: 4.5rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* target font size 27px (1.5 x paragraph text) */
+  font-size: 2.7rem;
+  font-weight: 400;
+  font-style: italic;
+  font-variant: small-caps;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.225rem;
+  margin-bottom: 1.8rem;
+  padding: 0.9rem 1.8rem;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl {
+  /* target font size 18px (paragraph text) */
+  margin-bottom: 3.6rem;
+}
+
+ul,
+ol,
+dl {
+  padding-left: 3.6rem;
+}
+
+ol {
+  list-style: upper-roman outside;
+}
+
+ol > li {
+  padding-left: 0.45rem;
+}
+
+strong,
+em,
+b,
+i[lang],
+dfn,
+abbr,
+q {
+  font-weight: 400;
+  font-style: italic;
+}
+
+cite {
+  font-variant: small-caps;
+  font-weight: 500;
+  font-style: italic;
+}
+
+blockquote {
+  font-family: "Beth Ellen", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.3;
+  margin: 3.6rem 1.8rem;
+  padding: 3.6rem;
+}
+
+blockquote abbr,
+blockquote cite {
+  font-family: "Alegreya", serif;
+}
+
+a {
+  line-height: 1.5;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
+.top-link {
+  display: table;
+  text-align: center;
+  margin: 0 auto 3.6rem auto;
+}
+
+.top-link [class|="fa"],
+.top-link svg {
+  margin-left: 0.45rem;
+}
+
+.logo {
+  font-family: "Beth Ellen", cursive;
+  font-weight: normal;
+  text-decoration: none;
+  border: none;
+}
+/*# sourceMappingURL=typography.css.map */
