@@ -1,0 +1,18 @@
+// SIZING SCALE
+// https://www.editorx.com/shaping-design/article/font-size
+// https://grtcalculator.com/
+
+// golden ratio = 1.618
+// scale 1 = (1.8 x 2) = 3.6
+// scale 3/4 = 2.7
+// scale 1/2 = 1.8
+// scale 1/4 = 0.9
+// scale 1/8 = 0.45
+// scale 1/16 = 0.225
+
+$scale-100: 3.6rem;       // full
+$scale-075: 2.7rem;       // three-quarters
+$scale-050: 1.8rem;       // half
+$scale-025: 0.9rem;       // quarter
+$scale-0125: 0.45rem;     // eighth
+$scale-00625: 0.225rem;   // sixteenth

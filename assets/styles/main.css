@@ -126,6 +126,7 @@ blockquote cite {
 }
 
 a {
+  display: inline-block;
   line-height: 1.5;
   color: #900;
   text-decoration: none;
@@ -182,6 +183,8 @@ body > footer .copyright {
 }
 
 .container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 0 1.8rem;
 }
 
@@ -361,7 +364,6 @@ body > footer .copyright {
 
 #index #content-menu > li > a {
   border: none;
-  display: inline-block;
   width: 100%;
 }
 

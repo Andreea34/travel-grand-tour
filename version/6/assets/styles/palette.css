@@ -6,7 +6,12 @@
   font-variant: normal;
 }
 
-#colors p {
+main .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#colors {
   text-align: center;
 }
 
@@ -15,12 +20,6 @@
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-}
-
-#colors .grid .color,
-#colors .grid .range,
-#colors .grid .combo {
-  text-align: center;
 }
 
 #colors .grid .color .swatch,

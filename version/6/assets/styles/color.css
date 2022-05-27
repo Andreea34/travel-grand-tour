@@ -22,6 +22,8 @@ body {
   font-style: normal;
   font-variant: normal;
   letter-spacing: 0.05rem;
+  color: #300;
+  background: #EFEBE9;
 }
 
 h1 {
@@ -71,6 +73,8 @@ blockquote {
   font-weight: 400;
   font-style: normal;
   line-height: 2.3;
+  background: #ffeacc;
+  color: #660000;
 }
 
 blockquote abbr,
@@ -79,14 +83,20 @@ blockquote cite {
 }
 
 a {
-  display: inline-block;
   line-height: 1.5;
+  color: #900;
   text-decoration: none;
-  border-bottom: dotted 1px;
+  border-bottom: dotted 1px #900;
 }
 
 a:hover {
+  color: #cc0000;
+  border-bottom-color: #cc0000;
   border-bottom-style: solid;
+}
+
+a:target {
+  color: #FFE0B2;
 }
 
 a.active {
@@ -95,22 +105,52 @@ a.active {
 }
 
 body > footer {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  color: #100;
+  background: #D2C6C2;
+}
+
+body > footer a {
+  color: #100;
+  border-bottom-color: #100;
+}
+
+body > footer a:hover {
+  color: #900;
+  border-bottom-color: #900;
+}
+
+#masthead {
+  color: #EFEBE9;
+  background: #100;
 }
 
 #masthead .logo {
   font-family: "Beth Ellen", cursive;
   font-weight: normal;
+  color: #D2C6C2;
   text-decoration: none;
   border: none;
 }
 
 #masthead .logo:hover {
+  color: #EFEBE9;
   border: none;
 }
 
+#masthead #page-menu > ol > li a {
+  color: #D2C6C2;
+  border-bottom-color: #D2C6C2;
+}
+
 #masthead #page-menu > ol > li a:hover, #masthead #page-menu > ol > li a.active {
-  border-bottom-style: solid;
+  color: #EFEBE9;
+  border-bottom-color: #EFEBE9;
+}
+
+#headline {
+  background: #300;
+  color: #EFEBE9;
 }
 
 #headline .title {
@@ -130,4 +170,4 @@ body > footer {
   line-height: 1.2;
   letter-spacing: 0.1rem;
 }
-/*# sourceMappingURL=typography.css.map */
+/*# sourceMappingURL=color.css.map */

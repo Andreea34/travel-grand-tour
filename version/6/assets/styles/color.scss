@@ -1,0 +1,53 @@
+@import '_scale';
+@import '_fonts';
+@import '_colors';
+
+// TYPOGRAPHY
+html { font-size: 62.5%; /* (16px * 0.625) = 10px root */ line-height: 1; }
+body { font-size: $scale-050; /* 18px */ line-height: 2; /* 36px */ font-family: $font-primary; font-weight: 400; font-style: normal; font-variant: normal; letter-spacing: 0.05rem; color: $color-primary; background: $color-light; }
+h1 { /* target font size 45px (2.5 x paragraph text) */ font-size: (2.5*$scale-050); font-weight: normal; line-height: 1; }
+h2,
+h3,
+h4,
+h5,
+h6 { /* target font size 27px (1.5 x paragraph text) */ font-size: (1.5*$scale-050); font-weight: 400; font-style: italic; font-variant: small-caps; line-height: 1.2; letter-spacing: $scale-00625; }
+ol { list-style: upper-roman outside; }
+strong,
+em,
+b,
+i[lang],
+dfn,
+abbr,
+q { font-weight: 400; font-style: italic; }
+//abbr { cursor: help; }
+cite { font-variant: small-caps; font-weight: 500; font-style: italic; }
+blockquote { font-family: $font-secondary; font-weight: 400; font-style: normal; line-height: 2.3; background: lighten($color-highlight, 5%); color: lighten($color-primary, 10%);
+  & abbr,
+  & cite { font-family: $font-primary; }
+}
+a { line-height: 1.5; color: $color-link-default; text-decoration: none; border-bottom: dotted 1px $color-link-default;
+  &:hover { color: $color-link-active; border-bottom-color: $color-link-active; border-bottom-style: solid; }
+  &:target { color: $color-link-target; }
+  &.active { border-bottom-width: 2px; border-bottom-style: solid; }
+}
+
+body > footer { font-size: 1.6rem; color: $color-dark; background: $color-muted;
+  & a { color: $color-dark; border-bottom-color: $color-dark; }
+  & a:hover { color: $color-link-default; border-bottom-color: $color-link-default; }
+}
+
+#masthead { color: $color-light; background: $color-dark;
+  & .logo { font-family: $font-secondary; font-weight: normal; color: $color-muted; text-decoration: none; border: none;
+    &:hover { color: $color-light; border: none; } }
+  & #page-menu {
+    & > ol {
+      & > li {
+        & a { color: $color-muted; border-bottom-color: $color-muted;
+          &:hover,
+          &.active { color: $color-light; border-bottom-color: $color-light; } } } } }
+}
+
+#headline { background: $color-primary; color: $color-light;
+  & .title { font-size: 2.7rem; font-weight: 400; font-style: italic; font-variant: small-caps; line-height: 1; letter-spacing: $scale-00625; }
+  & .subtitle { font-size: 4.5rem; font-weight: 400; font-style: italic; font-variant: normal; line-height: 1.2; letter-spacing: 0.1rem; }
+}
