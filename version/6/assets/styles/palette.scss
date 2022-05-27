@@ -1,0 +1,80 @@
+@import '_scale';
+@import '_fonts';
+@import '_colors';
+
+main .container { max-width: 700px; margin: 0 auto; }
+#colors { text-align: center;
+  & .grid { display: grid; grid-template-columns: repeat(6, 1fr);
+    & .color,
+    & .range,
+    & .combo {
+      & .swatch { width: 75px; height: 75px; padding-top: 18px; margin: 0 auto; border: solid 1px rgba(0,0,0,.25);
+       & span { font-size: 1.6rem; font-variant: small-caps; } }
+      & label { display: block; line-height: $scale-075; font-variant: small-caps;
+        &:first-of-type { margin-top: $scale-025; } }
+    }
+
+    & .color {
+      &.dark .swatch { background: $color-dark; color: $color-light; }
+      &.primary .swatch { background: $color-primary; color: $color-light; }
+      &.accent .swatch { background: $color-accent; color: $color-light; }
+      &.highlight .swatch { background: $color-highlight; color: $color-dark; }
+      &.muted .swatch { background: $color-muted; color: $color-dark; }
+      &.light .swatch { background: $color-light; color: $color-dark; }
+    }
+
+    & .range {
+      & .swatch:nth-child(1) { border-bottom: none; }
+      & .swatch:nth-child(2) { border-top: none; border-bottom: none; }
+      & .swatch:nth-child(3) { border-top: none; }
+      &.dark .swatch { background: $color-dark; color: $color-light;
+        &.dark { background: darken($color-dark, 10%); }
+        &.default { background: $color-dark; }
+        &.light { background: lighten($color-dark, 10%); } }
+      &.primary .swatch { background: $color-primary; color: $color-light;
+        &.dark { background: darken($color-primary, 10%); }
+        &.default { background: $color-primary; }
+        &.light { background: lighten($color-primary, 10%); } }
+      &.accent .swatch { background: $color-accent; color: $color-light;
+        &.dark { background: darken($color-accent, 10%); }
+        &.default { background: $color-accent; }
+        &.light { background: lighten($color-accent, 10%); } }
+      &.highlight .swatch { background: $color-highlight; color: $color-dark;
+        &.dark { background: darken($color-highlight, 10%); }
+        &.default { background: $color-highlight; }
+        &.light { background: lighten($color-highlight, 10%); } }
+      &.muted .swatch { background: $color-muted; color: $color-dark;
+        &.dark { background: darken($color-muted, 10%); }
+        &.default { background: $color-muted; }
+        &.light { background: lighten($color-muted, 10%); } }
+      &.light .swatch { background: $color-light; color: $color-dark;
+        &.dark { background: darken($color-light, 10%); }
+        &.default { background: $color-light; }
+        &.light { background: lighten($color-light, 10%); } }
+    }
+
+    & .combo {
+      //& .swatch { padding: 0; & span { font-size: (2*$scale-full); line-height: 1; } }
+      & .swatch:nth-child(1) { border-bottom: none; }
+      & .swatch:nth-child(2) { border-top: none; }
+      &.dark .swatch {
+        &.bg { background: $color-dark; color: $color-muted; }
+        &.fg { background: $color-muted; color: $color-dark; } }
+      &.primary .swatch {
+        &.bg { background: $color-primary; color: $color-light; }
+        &.fg { background: $color-light; color: $color-primary; } }
+      &.accent .swatch {
+        &.bg { background: $color-accent; color: $color-light; }
+        &.fg { background: $color-light; color: $color-accent; } }
+      &.highlight .swatch {
+        &.bg { background: $color-highlight; color: $color-primary; }
+        &.fg { background: $color-primary; color: $color-highlight; } }
+      &.muted .swatch {
+        &.bg { background: $color-muted; color: $color-primary; }
+        &.fg {  background: $color-primary; color: $color-muted; } }
+      &.light .swatch {
+        &.bg { background: $color-light; color: $color-primary; }
+        &.fg { background: $color-primary; color: $color-light; } }
+    }
+  }
+}

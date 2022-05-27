@@ -1,0 +1,49 @@
+@import '_scale';
+@import '_fonts';
+@import '_colors';
+
+// TYPOGRAPHY
+html { font-size: 62.5%; /* (16px * 0.625) = 10px root */ line-height: 1; }
+body { font-size: $scale-050; /* 18px */ line-height: 2; /* 36px */ font-family: $font-primary; font-weight: 400; font-style: normal; font-variant: normal; letter-spacing: 0.05rem; }
+h1 { /* target font size 45px (2.5 x paragraph text) */ font-size: (2.5*$scale-050); font-weight: normal; line-height: 1; }
+h2,
+h3,
+h4,
+h5,
+h6 { /* target font size 27px (1.5 x paragraph text) */ font-size: (1.5*$scale-050); font-weight: 400; font-style: italic; font-variant: small-caps; line-height: 1.2; letter-spacing: $scale-00625; }
+ol { list-style: upper-roman outside; }
+strong,
+em,
+b,
+i[lang],
+dfn,
+abbr,
+q { font-weight: 400; font-style: italic; }
+//abbr { cursor: help; }
+cite { font-variant: small-caps; font-weight: 500; font-style: italic; }
+blockquote { font-family: $font-secondary; font-weight: 400; font-style: normal; line-height: 2.3;
+  & abbr,
+  & cite { font-family: $font-primary; }
+}
+a { display: inline-block; line-height: 1.5; text-decoration: none; border-bottom: dotted 1px;
+  &:hover { border-bottom-style: solid; }
+  &.active { border-bottom-width: 2px; border-bottom-style: solid; }
+}
+
+body > footer { font-size: 1.4rem; }
+
+#masthead {
+  & .logo { font-family: $font-secondary; font-weight: normal; text-decoration: none; border: none;
+    &:hover { border: none; } }
+  & #page-menu { //display: none;
+    & > ol {
+      & > li {
+        & a {
+          &:hover,
+          &.active { border-bottom-style: solid; } } } } }
+}
+
+#headline {
+  & .title { font-size: 2.7rem; font-weight: 400; font-style: italic; font-variant: small-caps; line-height: 1; letter-spacing: $scale-00625; }
+  & .subtitle { font-size: 4.5rem; font-weight: 400; font-style: italic; font-variant: normal; line-height: 1.2; letter-spacing: 0.1rem; }
+}
