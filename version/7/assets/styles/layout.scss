@@ -1,0 +1,86 @@
+@import '_scale';
+@import '_fonts';
+@import '_colors';
+
+// RESET
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+::before, ::after { content: ''; position: absolute; }
+
+// TYPOGRAPHY
+html { font-size: 62.5%; /* (16px * 0.625) = 10px root */ line-height: 1; }
+body { font-size: $scale-050; /* 18px */ line-height: 2; /* 36px */ font-family: $font-primary; font-weight: 400; font-style: normal; font-variant: normal; letter-spacing: 0.05rem; color: $color-primary; background: $color-light; }
+h1 { /* target font size 45px (2.5 x paragraph text) */ font-size: (2.5*$scale-050); font-weight: normal; line-height: 1; text-align: center; margin-bottom: $scale-050; }
+h2,
+h3,
+h4,
+h5,
+h6 { /* target font size 27px (1.5 x paragraph text) */ font-size: (1.5*$scale-050); font-weight: 400; font-style: italic; font-variant: small-caps; text-align: center; line-height: 1.2; letter-spacing: $scale-00625; margin-bottom: $scale-050; padding: $scale-025 $scale-050; }
+p,
+blockquote,
+ul,
+ol,
+dl { /* target font size 18px (paragraph text) */ margin-bottom: $scale-100; }
+ul,
+ol,
+dl { padding-left: $scale-100; }
+ol { list-style: upper-roman outside;
+  & > li { padding-left: $scale-0125; }
+}
+strong,
+em,
+b,
+i[lang],
+dfn,
+abbr,
+q { font-weight: 400; font-style: italic; }
+//abbr { cursor: help; }
+cite { font-variant: small-caps; font-weight: 500; font-style: italic; }
+blockquote { font-family: $font-secondary; font-weight: 400; font-style: normal; line-height: 2.3; margin: $scale-100 $scale-050; padding: $scale-100; background: lighten($color-highlight, 5%); color: lighten($color-primary, 10%);
+  & abbr,
+  & cite { font-family: $font-primary; }
+}
+a { display: inline-block; line-height: 1.5; color: $color-link-default; text-decoration: none; border-bottom: dotted 1px $color-link-default;
+  &:hover { color: $color-link-active; border-bottom-color: $color-link-active; border-bottom-style: solid; }
+  &:target { color: $color-link-target; }
+  &.active { border-bottom-width: 2px; border-bottom-style: solid; }
+}
+
+// FLOW & LAYOUT
+body > header { padding: $scale-050 0; }
+body > main { padding-bottom: $scale-100; }
+section { padding: $scale-050 0; }
+body > footer { padding: $scale-100 0; font-size: 1.6rem; color: $color-dark; background: $color-muted;
+  & a { color: $color-dark; border-bottom-color: $color-dark; }
+  & a:hover { color: $color-link-default; border-bottom-color: $color-link-default; }
+  & .copyright { margin-bottom: 0; }
+}
+.container { margin: 0 auto; padding: 0 $scale-050; }
+.top-link { display: table; text-align: center; margin: 0 auto $scale-100 auto;
+  & [class|="fa"],
+  & svg { margin-left: $scale-0125; }
+}
+
+#masthead { margin-bottom: 0; text-align: center; color: $color-light; background: $color-dark;
+  & .logo { font-family: $font-secondary; font-weight: normal; color: $color-muted; text-decoration: none; border: none;
+    &:hover { color: $color-light; border: none; } }
+  & #page-menu { //display: none;
+    & > ol { list-style-type: none; padding: 0; margin: 0;
+      & > li { padding: 0; margin: $scale-025; display: inline-block;
+        & a { color: $color-muted; border-bottom-color: $color-muted;
+          &:hover,
+          &.active { color: $color-light; border-bottom-color: $color-light; } } } } }
+}
+
+#headline { min-height: 50vh; margin-bottom: $scale-100; display: flex; flex-direction: column; align-items: center; justify-content: center; background: $color-primary; color: $color-light;
+  & .title { font-size: 2.7rem; font-weight: 400; font-style: italic; font-variant: small-caps; text-align: center; line-height: 1; letter-spacing: $scale-00625; margin: $scale-050 0; }
+  & .subtitle { font-size: 4.5rem; font-weight: 400; font-style: italic; font-variant: normal; line-height: 1.2; letter-spacing: 0.1rem; padding: $scale-050; margin-bottom: $scale-050; }
+}
+
+#index { margin-left: auto; margin-right: auto;
+  & #content-menu { font-variant: normal; font-size: $scale-050; list-style: none; counter-reset: custom 0; padding: 0;
+    & > li { padding: 0; counter-increment: custom; text-align: center; border-bottom: dotted 1px darken($color-muted, 10%);
+      &::before { content: counter(custom, upper-roman)'.'; width: $scale-100; text-align: left; float: left; clear: left; }
+    & > a { border: none; width: 100%;
+      & [class|="fa"],
+      & svg { margin-top: $scale-0125; float: right; clear: right; } } } }
+}
