@@ -1,0 +1,14 @@
+// FONTS
+// https://fonts.google.com/specimen/Alegreya (serif)
+// https://fonts.google.com/specimen/Beth+Ellen (cursive)
+
+@font-face {
+  font-family: "Beth Ellen";
+  src: url("../fonts/beth-ellen/Beth-Ellen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+
+$font-primary: 'Alegreya', serif;
+$font-secondary: 'Beth Ellen', cursive;
