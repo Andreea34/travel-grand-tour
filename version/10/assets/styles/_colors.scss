@@ -1,0 +1,16 @@
+// COLORS
+// https://material.io/resources/color
+// https://www.colorhexa.com/990000
+
+//@use 'sass:color';
+$color-dark: #100;                                // rgb (17, 0, 0)
+$color-primary: #300;                             // rgb(51, 0, 0)
+$color-accent: #900;                              // rgb(153, 0, 0)
+$color-highlight: #FFE0B2;                        // rgb(255, 224, 178)
+$color-muted: #D2C6C2;                            // rgb(210, 198, 194)
+$color-light: #EFEBE9;                            // rgb(239, 235, 233)
+
+$color-link-default: $color-accent;
+$color-link-active: lighten($color-accent, 10%);
+//$color-link-active: color.scale($color-accent, $lightness: 10%);
+$color-link-target: $color-highlight;
