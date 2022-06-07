@@ -1,0 +1,37 @@
+// SIZING SCALE
+// https://www.editorx.com/shaping-design/article/font-size
+// https://grtcalculator.com/
+
+// golden ratio = 1.618
+// scale 1 = (1.8 x 2) = 3.6
+// scale 3/4 = 2.7
+// scale 1/2 = 1.8
+// scale 1/4 = 0.9
+// scale 1/8 = 0.45
+// scale 1/16 = 0.225
+
+
+// RELATIVE TO <HTML> --------------------------------------------------
+// $scale-100: 3.6rem;          // 36px    full
+// $scale-075: 2.7rem;          // 27px    three-quarters
+// $scale-050: 1.8rem;          // 18px    half
+// $scale-025: 0.9rem;          // 9px     quarter
+// $scale-0125: 0.45rem;        // 4.5px   eighth
+// $scale-00625: 0.225rem;      // 2.25px  sixteenth
+
+
+// RELATIVE TO <BODY> --------------------------------------------------
+// $scale-100: 2em;             // 36px    full
+// $scale-075: 1.5em;           // 27px    three-quarters
+// $scale-050: 1em;             // 18px    half
+// $scale-025: 0.5em;           // 9px     quarter
+// $scale-0125: 0.25em;         // 4.5px   eighth
+// $scale-00625: 0.125em;       // 2.25px  sixteenth
+
+// FACTORIAL --------------------------------------------------
+$scale-100: 1em;                // full
+$scale-075: 0.75em;             // three-quarters
+$scale-050: 0.5em;              // half
+$scale-025: 0.25em;             // quarter
+$scale-0125: 0.125em;           // eighth
+$scale-00625: 0.0625em;         // sixteenth
